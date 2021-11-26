@@ -1,0 +1,27 @@
+.littleLogo > img {
+  height: 4%;
+  width: 4%;
+  padding: 20px 0px 10px 20px;
+}
+
+/* ipad horizontal */
+@media screen and (min-height: 760px) {
+  @media screen and (min-width: 1024px) {
+    .littleLogo > img {
+      height: 7%;
+      width: 7%;
+      padding: 20px 10px 10px 20px;
+    }
+  }
+}
+
+/* iPhone 6/7/8 horizontal */
+@media screen and (max-height: 375px) {
+  @media screen and (max-width: 667px) {
+    .littleLogo > img {
+      height: 6%;
+      width: 6%;
+      padding: 20px 10px 10px 20px;
+    }
+  }
+}

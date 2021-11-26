@@ -1,0 +1,56 @@
+.homeContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.homeContainer img {
+  width: 20%;
+  height: 20%;
+  margin: 3% 0% 3% 0%;
+}
+
+.btnInit {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  font-family: var(--font-family);
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 25px;
+  height: 90px;
+  width: 220px;
+  font-size: 50px;
+}
+
+/* ipad horizontal */
+@media screen and (min-height: 760px) {
+  @media screen and (min-width: 1024px) {
+    .homeContainer img {
+      width: 380px;
+      height: 480px;
+      margin: 55px 0px 35px 0px;
+    }
+    .btnInit {
+      height: 95px;
+      width: 240px;
+      font-size: 50px;
+    }
+  }
+}
+
+/* iPhone 6/7/8 horizontal */
+@media screen and (max-height: 375px) {
+  @media screen and (max-width: 667px) {
+    .homeContainer img {
+      width: 160px;
+      height: 210px;
+      margin: 30px 0px 30px 0px;
+    }
+    .btnInit {
+      height: 60px;
+      width: 150px;
+      font-size: 30px;
+    }
+  }
+}

@@ -1,3 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Roboto:wght@300&family=Signika+Negative:wght@300;400&display=swap");
+
+:root {
+  --font-family: "Signika Negative", sans-serif;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-orange: #ff4300;
+  --color-gold: #bf720e;
+  --color-green: #558c03;
+  --color-yellow: #fcb607;
+  --color-grey: #c4c4c4;
+  --color-red: #e82525;
+}
+
 .App {
   text-align: center;
 }

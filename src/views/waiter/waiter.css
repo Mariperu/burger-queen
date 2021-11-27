@@ -2,4 +2,5 @@
   padding-top: 25px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  color: var(--color-white);
 }

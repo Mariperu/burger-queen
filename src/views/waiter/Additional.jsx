@@ -46,26 +46,26 @@ const Additional = ({ onClick }) => {
             type="checkbox"
             name="extra-cheese"
             value="cheese"
-            id="chk2-label"
+            id="chk1-label"
             onChange={(e) => setCheese(e.target.value)}
           />
-          <label htmlFor="chk2-label">Queso $ 1</label>
+          <label htmlFor="chk1-label">Queso $ 1</label>
 
           <input
             type="checkbox"
             name="extra-egg"
             value="egg"
-            id="chk1-label"
+            id="chk2-label"
             onChange={(e) => setEgg(e.target.value)}
           />
-          <label htmlFor="chk1-label">Huevo $ 1</label>
+          <label htmlFor="chk2-label">Huevo $ 1</label>
         </section>
 
         <button
           className="btnAdditional"
-          data-egg={egg}
+          data-meattype={meat}
           data-cheese={cheese}
-          data-meat={meat}
+          data-egg={egg}
           onClick={onClick}
         >
           Agregar

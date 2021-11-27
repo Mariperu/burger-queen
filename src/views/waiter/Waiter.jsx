@@ -1,26 +1,78 @@
 import React, { useState } from "react";
 import { useData } from "../../utils/useData.jsx";
+import { Modal } from "../../utils/Modal.jsx";
+import { IdGenerator } from "../../utils/IdGenerator.jsx";
 import { Header } from "./Header.jsx";
 import { MenuOptions } from "./MenuOptions.jsx";
 import { Products } from "./Products.jsx";
-import { Modal } from "../../utils/Modal.jsx";
+
 import { Additional } from "./Additional.jsx";
 import { Order } from "./Order.jsx";
 import "./waiter.css";
 
 const Waiter = () => {
-  //Data de firebase
-  const { docs } = useData("menu");
+  const { docs } = useData("menu"); //Data de firebase
+  const [menu, setMenu] = useState("Desayuno"); //Menu options
+  const [open, setOpen] = useState(false); //Modal
+  const [hamburgerExtra, setHamburgerExtra] = useState(""); //Opciones y adicionales de hamburguesa
+  const [orderDescription, setOrderDescription] = useState([]); //Descripción de cada orden
 
-  //Menu options
-  const [menu, setMenu] = useState("Desayuno");
-  //Modal
-  const [open, setOpen] = useState(false);
+  //Adicionales de hamburgesa
+  const addAdditional = (e) => {
+    let key = hamburgerExtra.id + "-" + IdGenerator();
+    //let key = "hbx-" + IdGenerator();
+    let meatDefault = "meat";
+    let quantity = 1;
+    let price = hamburgerExtra.price;
+    let product = hamburgerExtra.product;
 
+    //console.log(e.target);//show elems selec de modal
+    //target.dataset extrae info de opciones selec en modal
+    if (e.target.dataset.meattype !== "") {
+      product += ", " + e.target.dataset.meattype;
+    }
+    if (!e.target.dataset.meattype) {
+      product += ", " + meatDefault;
+    }
+    if (e.target.dataset.egg === "egg") {
+      product += ", egg";
+      price++;
+    }
+    if (e.target.dataset.cheese === "cheese") {
+      product += ", cheese";
+      price++;
+    }
+    //console.log(key, product, price, quantity);
+    orderDescription.push({ key, product, price, quantity }); //Adicionando cada pedido en lista de orden
+    setOpen(false); //Cerrando modal
+  };
+
+  //Tomando orden
   const addProductToOrder = (elem) => {
+    //findIndex: devuelve índice de 1er elem de array que cumpla con condicional, sino devuelve -1
+    const singleElem = orderDescription.findIndex((i) => i.key === elem.id);
+
+    //opciones hamburguesa +extra
     if (elem.type === "De la casa" && elem.subtype !== "Acompañamiento") {
-      setOpen(true);
-      console.log("Open modal");
+      setOpen(true); //console.log("Open modal");
+      setHamburgerExtra(elem); //console.log(setHamburgerExtra(elem));
+
+      //pedido diferente de hamburgusa
+    } else if (singleElem === -1) {
+      const key = elem.id;
+      const price = elem.price;
+      const product = elem.product;
+      const quantity = 1;
+      //const readyChef = false;
+      //console.log(key, product, price, quantity);
+      orderDescription.push({ key, product, price, quantity });
+      setOrderDescription([...orderDescription]);
+      //console.log(orderDescription);
+    } else {
+      let duplicateElem = orderDescription[singleElem];
+      duplicateElem.quantity += 1;
+      setOrderDescription([...orderDescription]);
+      //console.log(orderDescription);
     }
   };
 
@@ -51,7 +103,7 @@ const Waiter = () => {
           </section>
 
           <Modal open={open} close={() => setOpen(false)}>
-            <Additional />
+            <Additional onClick={(e) => addAdditional(e)} />
           </Modal>
         </section>
 

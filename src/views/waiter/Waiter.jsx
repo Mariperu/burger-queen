@@ -5,7 +5,6 @@ import { IdGenerator } from "../../utils/IdGenerator.jsx";
 import { Header } from "./Header.jsx";
 import { MenuOptions } from "./MenuOptions.jsx";
 import { Products } from "./Products.jsx";
-
 import { Additional } from "./Additional.jsx";
 import { Order } from "./Order.jsx";
 import "./waiter.css";
@@ -21,7 +20,7 @@ const Waiter = () => {
   const addAdditional = (e) => {
     let key = hamburgerExtra.id + "-" + IdGenerator();
     //let key = "hbx-" + IdGenerator();
-    let meatDefault = "meat";
+    let meatDefault = "res";
     let quantity = 1;
     let price = hamburgerExtra.price;
     let product = hamburgerExtra.product;
@@ -35,11 +34,11 @@ const Waiter = () => {
       product += ", " + meatDefault;
     }
     if (e.target.dataset.egg === "egg") {
-      product += ", egg";
+      product += ", huevo";
       price++;
     }
     if (e.target.dataset.cheese === "cheese") {
-      product += ", cheese";
+      product += ", queso";
       price++;
     }
     //console.log(key, product, price, quantity);
@@ -76,6 +75,10 @@ const Waiter = () => {
     }
   };
 
+  const clearOrder = () => {
+    setOrderDescription([]);
+  };
+
   return (
     <>
       <Header />
@@ -108,7 +111,14 @@ const Waiter = () => {
         </section>
 
         <section>
-          <Order />
+          <Order
+            data-testid="order"
+            orderDescription={orderDescription}
+            reset={clearOrder}
+            onClick={() => {
+              setOrderDescription([]);
+            }}
+          />
         </section>
       </section>
     </>

@@ -1,10 +1,18 @@
 import React, { useState } from "react";
 import { Button } from "../../components/Button.jsx";
 import { Input } from "../../components/Input.jsx";
+import { OrderItem } from "./OrderItem.jsx";
 
-const Order = () => {
+const Order = (props) => {
   const [customerName, setCustomerName] = useState("");
   const [tableNumber, setTableNumber] = useState("");
+
+  const newOrder = props.orderDescription;
+
+  const totalSum = newOrder.reduce(
+    (accumulator, elem) => accumulator + elem.price * elem.quantity,
+    0
+  );
 
   return (
     <>
@@ -34,11 +42,25 @@ const Order = () => {
           <h4>Precio</h4>
         </section>
 
-        <section className="customerOrder">Resumen viene de waiter</section>
+        <section className="customerOrder">
+          {newOrder.map((elem, index) => {
+            return (
+              <OrderItem
+                key={index}
+                quantity={elem.quantity}
+                product={elem.product}
+                newPrice={elem.quantity * elem.price}
+                // addItem={(e) => addItemQuantity(elem)}
+                // restItem={(e) => removeItemQuantity(elem)}
+                // deleteItem={(e) => deleteItem(elem)}
+              />
+            );
+          })}
+        </section>
 
         <section className="totalOrder">
           <h3>
-            TOTAL: $<span>ejm 10</span>
+            TOTAL: $ <span>{totalSum}</span>
           </h3>
         </section>
 

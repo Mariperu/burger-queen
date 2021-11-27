@@ -15,7 +15,7 @@ const Additional = ({ onClick }) => {
           <input
             type="radio"
             name="options"
-            value="meat"
+            value="res"
             id="opt1-label"
             onChange={(e) => setMeat(e.target.value)}
           />
@@ -24,7 +24,7 @@ const Additional = ({ onClick }) => {
           <input
             type="radio"
             name="options"
-            value="chicken"
+            value="pollo"
             id="opt2-label"
             onChange={(e) => setMeat(e.target.value)}
           />
@@ -33,7 +33,7 @@ const Additional = ({ onClick }) => {
           <input
             type="radio"
             name="options"
-            value="veggie"
+            value="vegetariana"
             id="opt3-label"
             onChange={(e) => setMeat(e.target.value)}
           />

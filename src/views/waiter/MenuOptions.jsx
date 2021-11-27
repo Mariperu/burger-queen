@@ -1,10 +1,11 @@
 import React from "react";
 import { Button } from "../../components/Button.jsx";
+import "./menuOptions.css";
 
 const MenuOptions = ({ breakfast, lunch, drinks }) => {
   return (
     <>
-      <section>
+      <section className="menuContainer">
         <Button
           className={"btnMenuOption"}
           onClick={breakfast}

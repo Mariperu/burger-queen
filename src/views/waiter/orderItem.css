@@ -1,0 +1,68 @@
+.orderItemContainer {
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr 1fr 1fr;
+  column-gap: 1%;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 0px 10px 10px;
+}
+
+.iconsQuantity {
+  display: flex;
+  justify-content: space-around;
+}
+.descriptionOrderItem > p {
+  margin: 0px 0px 0px 0px;
+  text-align: center;
+}
+
+.fas {
+  padding: 2px 10px 0px 10px;
+  cursor: pointer;
+}
+
+.fa-plus-circle {
+  color: var(--color-green);
+}
+.fa-minus-circle {
+  color: var(--color-gold);
+}
+.fa-trash-alt {
+  color: var(--color-red);
+}
+
+/* ipad horizontal */
+@media screen and (min-height: 760px) {
+  @media screen and (min-width: 1024px) {
+    .orderItemContainer {
+      font-size: 20px;
+      padding: 10px 0px 10px 10px;
+    }
+
+    .descriptionOrderItem > p {
+      margin: 0px 0px 0px 0px;
+    }
+
+    .fas {
+      padding: 2px 10px 0px 10px;
+    }
+  }
+}
+
+/* iPhone 6/7/8 horizontal */
+@media screen and (max-height: 375px) {
+  @media screen and (max-width: 667px) {
+    .orderItemContainer {
+      font-size: 15px;
+      padding: 7px 0px 7px 5px;
+    }
+
+    .descriptionOrderItem > p {
+      margin: 0px 0px 0px 0px;
+    }
+
+    .fas {
+      padding: 2px 10px 0px 10px;
+    }
+  }
+}

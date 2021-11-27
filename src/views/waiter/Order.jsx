@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button } from "../../components/Button.jsx";
 import { Input } from "../../components/Input.jsx";
 import { OrderItem } from "./OrderItem.jsx";
+import "./order.css";
 
 const Order = (props) => {
   const [customerName, setCustomerName] = useState("");
@@ -17,7 +18,7 @@ const Order = (props) => {
   return (
     <>
       <section className="orderContainer">
-        <h2>Orden</h2>
+        <h2 className="tittleOrder">Orden</h2>
 
         <section className="orderInputs">
           <Input
@@ -58,22 +59,22 @@ const Order = (props) => {
           })}
         </section>
 
-        <section className="totalOrder">
+        <section className="totalSum">
           <h3>
             TOTAL: $ <span>{totalSum}</span>
           </h3>
         </section>
 
-        <section className="menu-order-btns">
+        <section className="btnOrder">
           <Button
             onClick={console.log("click cancelar orden")}
-            class="btnCancelOrder"
-            label="Cancelar"
+            className="btnCancelOrder"
+            text="Cancelar"
           />
           <Button
             data-testid="send-order"
-            class="btnSendOrder"
-            label="Enviar"
+            className="btnSendOrder"
+            text="Enviar"
             onClick={console.log("click enviar orden")}
           />
         </section>

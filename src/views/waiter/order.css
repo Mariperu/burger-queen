@@ -1,0 +1,286 @@
+.orderContainer {
+  display: flex;
+  flex-direction: column;
+  border-left: solid 1px var(--color-white);
+  padding-left: 30px;
+}
+.tittleOrder {
+  margin: 10px 0px 0px 0px;
+  font-size: 35px;
+  text-align: center;
+}
+
+.orderInputs {
+  display: flex;
+  justify-content: left;
+  margin: 20px 0px 10px 0px;
+}
+
+.orderInputs > h2 {
+  margin: 0px;
+  padding: 7px 15px 0px 15px;
+}
+.customer,
+.table {
+  border-radius: 25px;
+  height: 35px;
+  padding: 5px 20px 0px 20px;
+  font-family: var(--font-family);
+  font-size: 20px;
+  text-align: center;
+}
+
+.customer {
+  width: 250px;
+}
+.table {
+  width: 80px;
+}
+
+.customer::placeholder,
+.table::placeholder {
+  font-size: 18px;
+  text-align: center;
+}
+
+.orderTittleItem {
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr 1fr 1fr 0.5fr;
+  text-align: center;
+  font-size: 20px;
+}
+
+/*barra scroll*/
+.customerOrder {
+  width: 95%;
+  height: 200px;
+  overflow: scroll;
+}
+.customerOrder::-webkit-scrollbar {
+  width: 5px;
+}
+.customerOrder::-webkit-scrollbar:vertical {
+  width: 5px;
+}
+.customerOrder::-webkit-scrollbar-thumb {
+  background: var(--color-grey);
+  border-radius: 5px;
+}
+
+/*suma*/
+.totalSum > h3 {
+  text-align: center;
+  font-size: 30px;
+  margin: 10px 0px 10px 0px;
+}
+
+/*botones*/
+.btnOrder {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 50px 0px 50px;
+}
+
+.btnCancelOrder,
+.btnSendOrder {
+  background-color: var(--color-grey);
+  color: var(--color-black);
+  font-family: var(--font-family);
+  border-radius: 25px;
+  border: none;
+  height: 50px;
+  width: 130px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.btnCancelOrder:hover,
+.btnSendOrder:hover {
+  background-color: var(--color-green);
+  color: var(--color-white);
+  letter-spacing: 0.5px;
+}
+
+/* ipad horizontal */
+@media screen and (min-height: 760px) {
+  @media screen and (min-width: 1024px) {
+    .orderContainer {
+      padding-left: 10px;
+    }
+    .tittleOrder {
+      margin: 0px 0px 0px 0px;
+      font-size: 35px;
+    }
+
+    .orderInputs {
+      margin: 20px 0px 0px 0px;
+    }
+
+    .orderInputs > h2 {
+      margin: 0px;
+      padding: 5px 5px 0px 5px;
+    }
+    .customer,
+    .table {
+      border-radius: 25px;
+      height: 34px;
+      padding: 0px 15px 0px 15px;
+      font-size: 25px;
+    }
+
+    .customer {
+      width: 205px;
+    }
+    .table {
+      width: 60px;
+    }
+
+    .customer::placeholder,
+    .table::placeholder {
+      font-size: 18px;
+    }
+
+    .orderTittleItem {
+      font-size: 20px;
+    }
+
+    /*barra scroll*/
+    .customerOrder {
+      width: 95%;
+      height: 270px;
+      overflow: scroll;
+    }
+    .customerOrder::-webkit-scrollbar {
+      width: 5px;
+    }
+    .customerOrder::-webkit-scrollbar:vertical {
+      width: 5px;
+    }
+    .customerOrder::-webkit-scrollbar-thumb {
+      background: var(--color-grey);
+      border-radius: 5px;
+    }
+
+    /*suma*/
+    .totalSum > h3 {
+      font-size: 30px;
+      margin: 10px 0px 10px 0px;
+    }
+
+    /*botones*/
+    .btnOrder {
+      margin: 20px 50px 0px 50px;
+    }
+
+    .btnCancelOrder,
+    .btnSendOrder {
+      border-radius: 25px;
+      border: none;
+      height: 60px;
+      width: 150px;
+      font-size: 30px;
+      letter-spacing: 0.5px;
+    }
+
+    .btnCancelOrder:hover,
+    .btnSendOrder:hover {
+      letter-spacing: 0.5px;
+    }
+  }
+}
+
+/* iPhone 6/7/8 horizontal */
+@media screen and (max-height: 375px) {
+  @media screen and (max-width: 667px) {
+    .orderContainer {
+      padding-left: 10px;
+    }
+    .tittleOrder {
+      margin: 0px 0px 0px 0px;
+      font-size: 20px;
+    }
+
+    .orderInputs {
+      margin: 8px 0px 0px 0px;
+    }
+
+    .orderInputs > h2 {
+      margin: 0px;
+      padding: 3px 5px 0px 5px;
+      font-size: 18px;
+      font-weight: normal;
+    }
+    .customer,
+    .table {
+      border-radius: 25px;
+      height: 22px;
+      padding: 0px 10px 0px 10px;
+      font-size: 16px;
+    }
+
+    .customer {
+      width: 150px;
+    }
+    .table {
+      width: 40px;
+    }
+
+    .customer::placeholder,
+    .table::placeholder {
+      font-size: 12px;
+    }
+
+    .orderTittleItem {
+      font-size: 15px;
+      margin: 0px;
+    }
+    .orderTittleItem > h4 {
+      margin: 8px 0px 5px 0px;
+    }
+
+    /*barra scroll*/
+    .customerOrder {
+      width: 95%;
+      height: 100px;
+      overflow: scroll;
+    }
+    .customerOrder::-webkit-scrollbar {
+      width: 5px;
+    }
+    .customerOrder::-webkit-scrollbar:vertical {
+      width: 5px;
+    }
+    .customerOrder::-webkit-scrollbar-thumb {
+      background: var(--color-grey);
+      border-radius: 5px;
+    }
+
+    /*suma*/
+    .totalSum > h3 {
+      font-size: 18px;
+      margin: 5px 0px 0px 0px;
+    }
+
+    /*botones*/
+    .btnOrder {
+      margin: 10px 10px 10px 10px;
+    }
+
+    .btnCancelOrder,
+    .btnSendOrder {
+      border-radius: 25px;
+      height: 35px;
+      width: 100px;
+      font-size: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .btnCancelOrder:hover,
+    .btnSendOrder:hover {
+      letter-spacing: 0.5px;
+    }
+  }
+}

@@ -116,7 +116,7 @@ const Waiter = () => {
             orderDescription={orderDescription}
             reset={clearOrder}
             onClick={() => {
-              setOrderDescription([]);
+              setOrderDescription([]); //limpiar orden, cancelar
             }}
           />
         </section>

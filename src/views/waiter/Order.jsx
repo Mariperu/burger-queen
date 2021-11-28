@@ -2,14 +2,16 @@ import React, { useState } from "react";
 import { Button } from "../../components/Button.jsx";
 import { Input } from "../../components/Input.jsx";
 import { OrderItem } from "./OrderItem.jsx";
+import { db } from "../../firebase/config";
+import { collection, addDoc } from "firebase/firestore";
 import "./order.css";
 
-const Order = (props) => {
+const Order = ({ orderDescription, reset, onClick }) => {
   const [customerName, setCustomerName] = useState("");
   const [tableNumber, setTableNumber] = useState("");
   const [, setCurrentOrder] = useState([]);
 
-  const newOrder = props.orderDescription;
+  const newOrder = orderDescription;
 
   //Suma total
   const totalSum = newOrder.reduce(
@@ -43,6 +45,30 @@ const Order = (props) => {
   };
 
   //console.log("NUEVA ORDEN", newOrder);
+
+  //Subir nueva orden a Firebase con id generado por firestore
+  const sendNewOrder = async (e) => {
+    e.preventDefault();
+    if (!customerName || !tableNumber) {
+      alert("Por favor ingresa nombre de cliente y número de mesa");
+    } else if (newOrder.length === 0) {
+      alert("Orden vacía");
+    } else {
+      await addDoc(collection(db, "order"), {
+        init_time: new Date().toLocaleString("es-PE"),
+        customer: customerName,
+        table: tableNumber,
+        order: newOrder,
+        total: "$ " + totalSum,
+        state: "pending",
+      }).then(() => {
+        //para limpiar campos
+        setCustomerName("");
+        setTableNumber("");
+        setCurrentOrder(reset);
+      });
+    }
+  };
 
   return (
     <>
@@ -96,7 +122,7 @@ const Order = (props) => {
 
         <section className="btnOrder">
           <Button
-            onClick={console.log("click cancelar orden")}
+            onClick={onClick}
             className="btnCancelOrder"
             text="Cancelar"
           />
@@ -104,7 +130,7 @@ const Order = (props) => {
             data-testid="send-order"
             className="btnSendOrder"
             text="Enviar"
-            onClick={console.log("click enviar orden")}
+            onClick={sendNewOrder}
           />
         </section>
       </section>

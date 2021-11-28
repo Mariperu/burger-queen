@@ -7,13 +7,42 @@ import "./order.css";
 const Order = (props) => {
   const [customerName, setCustomerName] = useState("");
   const [tableNumber, setTableNumber] = useState("");
+  const [, setCurrentOrder] = useState([]);
 
   const newOrder = props.orderDescription;
 
+  //Suma total
   const totalSum = newOrder.reduce(
     (accumulator, elem) => accumulator + elem.price * elem.quantity,
     0
   );
+
+  //Adicionar mismo item
+  const addQuantity = (elem) => {
+    elem.quantity = elem.quantity + 1;
+    setCurrentOrder({ ...newOrder });
+    //console.log(newOrder);
+  };
+
+  //restar
+  const reduceQuantity = (elem) => {
+    //console.log(newOrder.indexOf(elem));
+    if (elem.quantity === 1) {
+      newOrder.splice(newOrder.indexOf(elem), 1); //splice: (nro posic, cant elem a elim desde esa posic)
+      setCurrentOrder([...newOrder]);
+    } else {
+      elem.quantity = elem.quantity - 1;
+      setCurrentOrder({ ...newOrder });
+    }
+  };
+
+  //eliminar item
+  const deleteItem = (item) => {
+    newOrder.splice(newOrder.indexOf(item), 1); //splice: (nro posic, cant elem a elim desde esa posic)
+    setCurrentOrder([...newOrder]);
+  };
+
+  //console.log("NUEVA ORDEN", newOrder);
 
   return (
     <>
@@ -51,9 +80,9 @@ const Order = (props) => {
                 quantity={elem.quantity}
                 product={elem.product}
                 newPrice={elem.quantity * elem.price}
-                // addItem={(e) => addItemQuantity(elem)}
-                // restItem={(e) => removeItemQuantity(elem)}
-                // deleteItem={(e) => deleteItem(elem)}
+                addQuantity={() => addQuantity(elem)}
+                reduceQuantity={() => reduceQuantity(elem)}
+                deleteItem={() => deleteItem(elem)}
               />
             );
           })}

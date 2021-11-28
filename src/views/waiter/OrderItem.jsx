@@ -5,17 +5,17 @@ const OrderItem = ({
   quantity,
   product,
   newPrice,
-  addItem,
-  restItem,
+  addQuantity,
+  reduceQuantity,
   deleteItem,
 }) => {
   return (
     <>
       <section className="orderItemContainer">
         <section className="descriptionOrderItem iconsQuantity">
-          <i onClick={addItem} className="fas fa-plus-circle"></i>
+          <i onClick={addQuantity} className="fas fa-plus-circle"></i>
           <p>{quantity}</p>
-          <i onClick={restItem} className="fas fa-minus-circle"></i>
+          <i onClick={reduceQuantity} className="fas fa-minus-circle"></i>
         </section>
 
         <section className="descriptionOrderItem">

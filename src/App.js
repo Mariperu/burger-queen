@@ -18,7 +18,7 @@ function App() {
           <Route path="/mesero" element={<Waiter />} />
           <Route path="/chef" element={<Chef />} />
           <Route path="/ready" element={<OrdersReady />} />
-          <Route element={<Error404 />} />
+          <Route path="*" element={<Error404 />} />
         </Routes>
       </Router>
     </>

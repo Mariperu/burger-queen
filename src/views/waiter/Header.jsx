@@ -1,9 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Logo } from "../../components/Logo.jsx";
+import { useResult } from "../../utils/useResult.jsx";
 import "./header.css";
 
 const Header = () => {
+  const doneData = useResult("order", "done"); //Data de firebase //"done"
+  const counterReady = doneData.length;
+  //console.log(counterReady);
+
   return (
     <>
       <section className="headerContainer">
@@ -19,8 +24,8 @@ const Header = () => {
             <i className="fas fa-user-friends"></i>Usuarios
           </a>
 
-          <a href="/ready">
-            <i className="fas fa-user-friends"></i>Pedidos listos
+          <a href="/ready" className="counterReady">
+            <span> {counterReady} </span>Pedidos listos
           </a>
         </section>
       </section>

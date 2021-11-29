@@ -21,7 +21,7 @@ const CancelWarning = () => {
   return (
     <>
       <section className="CancelWarningContainer">
-        <h3>Deseas de cancelar el pedido?</h3>
+        <h3>Deseas cancelar el pedido?</h3>
 
         <Button
           className="btnConfirm"

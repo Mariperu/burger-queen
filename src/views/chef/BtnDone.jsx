@@ -34,7 +34,7 @@ const BtnDone = () => {
     <>
       <Button
         className="btnDoneChef"
-        text="Listos"
+        text="Listo"
         onClick={() => {
           statePrepared(singleOrder.id);
         }}

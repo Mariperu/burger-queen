@@ -8,7 +8,7 @@ const DoneDescription = () => {
   return (
     <>
       <section>
-        <h2>Orden Listo</h2>
+        <h2>Orden Lista</h2>
         <section>
           <p> Cliente: {singleDoneOrder.data.customer}</p>
           <p>Mesa: {singleDoneOrder.data.table}</p>

@@ -22,13 +22,13 @@ const Chef = () => {
 
       <section className="chefOptionsContainer">
         <Button
-          text="Pendiente"
+          text="Pendientes"
           className="pendingOption"
           onClick={() => renderPending()}
         />
 
         <Button
-          text="Listo"
+          text="Listos"
           className="doneOption"
           onClick={() => renderDone()}
         />

@@ -4,11 +4,12 @@ import { doc, updateDoc } from "firebase/firestore";
 import { SingleOrder } from "../../context/SingleOrder.jsx";
 import { Button } from "../../components/Button.jsx";
 import "./description.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const BtnDone = () => {
   const [singleOrder, setSingleOrder] = useContext(SingleOrder);
-
-  console.log("CONSOLE DE BTN DONE ", singleOrder.data.order);
+  //console.log("BTN DONE ", singleOrder.data.order);
 
   const statePrepared = (id) => {
     let readyOrdersArray = singleOrder.data.order.map(
@@ -23,11 +24,20 @@ const BtnDone = () => {
         state: "done",
         done_time: new Date().toLocaleString("es-PE"),
       }).then(() => {
-        console.log("estado pedido: preparado");
+        //console.log("estado pedido: preparado");
       });
       setSingleOrder();
     } else {
-      alert("Por favor completar la orden.");
+      //alert("Por favor completar la orden.");
+      toast.warn("La orden no esta lista.", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     }
   };
 
@@ -40,6 +50,7 @@ const BtnDone = () => {
           statePrepared(singleOrder.id);
         }}
       />
+      <ToastContainer />
     </>
   );
 };

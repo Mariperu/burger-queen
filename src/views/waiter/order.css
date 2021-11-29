@@ -78,7 +78,7 @@
 .btnOrder {
   display: flex;
   justify-content: space-between;
-  margin: 20px 50px 0px 50px;
+  margin: 20px 0px 0px 0px;
 }
 
 .btnCancelOrder,
@@ -95,6 +95,7 @@
   cursor: pointer;
   text-align: center;
   letter-spacing: 0.5px;
+  margin: 0px 50px 0px 90px;
 }
 
 .btnCancelOrder:hover,
@@ -172,7 +173,7 @@
 
     /*botones*/
     .btnOrder {
-      margin: 20px 50px 0px 50px;
+      margin: 20px 0px 0px 0px;
     }
 
     .btnCancelOrder,
@@ -183,6 +184,7 @@
       width: 150px;
       font-size: 30px;
       letter-spacing: 0.5px;
+      margin: 0px 20px 0px 45px;
     }
 
     .btnCancelOrder:hover,
@@ -204,7 +206,7 @@
     }
 
     .orderInputs {
-      margin: 8px 0px 0px 0px;
+      margin: 8px 10px 0px 0px;
     }
 
     .orderInputs > h2 {
@@ -222,7 +224,7 @@
     }
 
     .customer {
-      width: 150px;
+      width: 140px;
     }
     .table {
       width: 40px;
@@ -266,7 +268,7 @@
 
     /*botones*/
     .btnOrder {
-      margin: 10px 10px 10px 10px;
+      margin: 10px 0px 10px 0px;
     }
 
     .btnCancelOrder,
@@ -276,6 +278,7 @@
       width: 100px;
       font-size: 20px;
       letter-spacing: 0.5px;
+      margin: 0px 10px 0px 35px;
     }
 
     .btnCancelOrder:hover,

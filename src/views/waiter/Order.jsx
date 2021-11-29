@@ -5,6 +5,8 @@ import { OrderItem } from "./OrderItem.jsx";
 import { db } from "../../firebase/config";
 import { collection, addDoc } from "firebase/firestore";
 import "./order.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Order = ({ orderDescription, reset, onClick }) => {
   const [customerName, setCustomerName] = useState("");
@@ -50,9 +52,27 @@ const Order = ({ orderDescription, reset, onClick }) => {
   const sendNewOrder = async (e) => {
     e.preventDefault();
     if (!customerName || !tableNumber) {
-      alert("Por favor ingresa nombre de cliente y número de mesa");
+      //alert("Por favor ingresa nombre de cliente y número de mesa");
+      toast.info("Por favor ingresa nombre de cliente y número de mesa.", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     } else if (newOrder.length === 0) {
-      alert("Orden vacía");
+      //alert("Orden vacía");
+      toast.warn("Orden vacía", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     } else {
       await addDoc(collection(db, "order"), {
         init_time: new Date().toLocaleString("es-PE"),
@@ -132,6 +152,7 @@ const Order = ({ orderDescription, reset, onClick }) => {
             text="Enviar"
             onClick={sendNewOrder}
           />
+          <ToastContainer />
         </section>
       </section>
     </>

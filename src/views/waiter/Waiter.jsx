@@ -8,6 +8,7 @@ import { Products } from "./Products.jsx";
 import { Additional } from "./Additional.jsx";
 import { Order } from "./Order.jsx";
 import "./waiter.css";
+import swal from "sweetalert";
 
 const Waiter = () => {
   const { docs } = useData("menu"); //Data de firebase
@@ -79,6 +80,20 @@ const Waiter = () => {
     setOrderDescription([]);
   };
 
+  //Cancelar orden
+  const showCancelAlert = () => {
+    swal({
+      title: "Cancelar",
+      text: "¿Deseas cancelar el pedido?",
+      icon: "warning",
+      buttons: ["No", "Si"],
+    }).then((resp) => {
+      if (resp) {
+        swal({ text: "Pedido cancelado", icon: "success", timer: "1000" });
+        setOrderDescription([]); //limpia array
+      }
+    });
+  };
   return (
     <>
       <Header />
@@ -115,9 +130,12 @@ const Waiter = () => {
             data-testid="order"
             orderDescription={orderDescription}
             reset={clearOrder}
-            onClick={() => {
-              setOrderDescription([]); //limpiar orden, cancelar
-            }}
+            // onClick={() => {
+            //   setOrderDescription([]); //limpiar orden, cancelar
+            // }}
+            onClick={
+              () => showCancelAlert() //limpiar orden, cancelar
+            }
           />
         </section>
       </section>

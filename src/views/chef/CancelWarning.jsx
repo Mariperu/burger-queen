@@ -3,6 +3,7 @@ import { db } from "../../firebase/config";
 import { doc, updateDoc } from "firebase/firestore";
 import { SingleOrder } from "../../context/SingleOrder.jsx";
 import { Button } from "../../components/Button.jsx";
+import "./cancelWarning.css";
 
 const CancelWarning = () => {
   const [singleOrder, setSingleOrder] = useContext(SingleOrder);
@@ -13,15 +14,15 @@ const CancelWarning = () => {
     updateDoc(ref, {
       state: "canceled",
     }).then(() => {
-      console.log("estado pedido: cancelado");
+      //console.log("estado pedido: cancelado");
     });
     setSingleOrder();
   };
 
   return (
     <>
-      <section className="CancelWarningContainer">
-        <h3>Deseas cancelar el pedido?</h3>
+      <section className="cancelWarningContainer">
+        <h3>¿Deseas cancelar el pedido?</h3>
 
         <Button
           className="btnConfirm"

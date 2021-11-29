@@ -5,10 +5,13 @@
   margin-left: 15px;
 }
 .additionalContainer h3 {
-  padding: 10px 0px 10px 0px;
+  padding: 10px 0px 10px 10px;
   font-size: 22px;
 }
 
+.additionalOptions {
+  margin-left: 10px;
+}
 .additionalOptions > input[type="radio"],
 .additionalOptions > input[type="checkbox"] {
   border: 0px;
@@ -17,7 +20,7 @@
 }
 
 .additionalOptions > label {
-  padding: 0px 8px 0px 8px;
+  padding: 0px 5px 0px 5px;
   font-size: 19px;
 }
 
@@ -28,10 +31,14 @@
   cursor: pointer;
   border-radius: 25px;
   border: none;
-  height: 40px;
-  width: 120px;
-  font-size: 22px;
-  margin: 25px 20px 0px 20px;
+  height: 50px;
+  width: 140px;
+  font-size: 25px;
+  margin: 25px 20px 0px 30px;
+}
+
+.btnAdditional:hover {
+  background-color: var(--color-black);
 }
 
 /* ipad horizontal */
@@ -41,10 +48,12 @@
       margin-left: 15px;
     }
     .additionalContainer h3 {
-      padding: 10px 0px 10px 0px;
+      padding: 10px 0px 10px 15px;
       font-size: 23px;
     }
-
+    .additionalOptions {
+      margin-left: 10px;
+    }
     .additionalOptions > input[type="radio"],
     .additionalOptions > input[type="checkbox"] {
       border: 0px;
@@ -53,17 +62,16 @@
     }
 
     .additionalOptions > label {
-      padding: 0px 8px 0px 8px;
+      padding: 0px 8px 0px 5px;
       font-size: 19px;
     }
 
     .btnAdditional {
       border-radius: 25px;
-      border: none;
       height: 50px;
       width: 140px;
       font-size: 25px;
-      margin: 30px 20px 0px 20px;
+      margin: 30px 20px 0px 35px;
     }
   }
 }
@@ -75,10 +83,12 @@
       margin-left: 15px;
     }
     .additionalContainer h3 {
-      padding: 5px 0px 5px 0px;
+      padding: 5px 0px 5px 8px;
       font-size: 18px;
     }
-
+    .additionalOptions {
+      margin-left: 8px;
+    }
     .additionalOptions > input[type="radio"],
     .additionalOptions > input[type="checkbox"] {
       border: 0px;
@@ -87,17 +97,16 @@
     }
 
     .additionalOptions > label {
-      padding: 0px 5px 0px 5px;
+      padding: 0px 2px 0px 2px;
       font-size: 16px;
     }
 
     .btnAdditional {
       border-radius: 25px;
-      border: none;
       height: 40px;
       width: 110px;
       font-size: 20px;
-      margin: 30px 20px 0px 20px;
+      margin: 30px 20px 0px 35px;
     }
   }
 }

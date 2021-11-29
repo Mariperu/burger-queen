@@ -1,0 +1,73 @@
+.cancelWarningContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.cancelWarningContainer h3 {
+  padding: 50px 0px 20px 20px;
+  font-size: 32px;
+  text-align: center;
+}
+
+.btnConfirm {
+  color: var(--color-white);
+  background-color: var(--color-orange);
+  font-family: var(--font-family);
+  cursor: pointer;
+  border-radius: 25px;
+  border: none;
+  height: 50px;
+  width: 150px;
+  font-size: 28px;
+  margin: 10px 0px 0px 20px;
+}
+
+.btnConfirm:hover {
+  background-color: var(--color-black);
+}
+
+/* ipad horizontal */
+@media screen and (min-height: 760px) {
+  @media screen and (min-width: 1024px) {
+    .cancelWarningContainer {
+      margin-left: 15px;
+    }
+
+    .cancelWarningContainer h3 {
+      padding: 50px 0px 20px 20px;
+      font-size: 32px;
+    }
+
+    .btnConfirm {
+      border-radius: 25px;
+      height: 60px;
+      width: 150px;
+      font-size: 28px;
+      margin: 10px 0px 0px 20px;
+    }
+  }
+}
+
+/* iPhone 6/7/8 horizontal */
+@media screen and (max-height: 375px) {
+  @media screen and (max-width: 667px) {
+    .cancelWarningContainer {
+      margin-left: 15px;
+    }
+
+    .cancelWarningContainer h3 {
+      padding: 25px 0px 10px 20px;
+      font-size: 25px;
+    }
+
+    .btnConfirm {
+      border-radius: 25px;
+      height: 50px;
+      width: 150px;
+      font-size: 25px;
+      margin: 10px 0px 0px 20px;
+    }
+  }
+}

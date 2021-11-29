@@ -25,16 +25,18 @@ const Pending = () => {
               key={order.id}
               onClick={() => currentActiveOrder(order)}
             >
-              <h3>Cliente: {order.data.customer}</h3>
-              <h3>Mesa: {order.data.table}</h3>
+              <h3>Cliente: {order.data.customer} </h3>
+              <h3>- Mesa: {order.data.table}</h3>
             </button>
           ))}
         </section>
 
-        <section className="pendingDescription">
+        <section>
           <SingleOrder.Provider value={[singleOrderData, setSingleOrderData]}>
             {singleOrderData === undefined ? (
-              "Selecciona un pedido para ver el detalle."
+              <h2 className="textToActive">
+                Selecciona un pedido para ver el detalle.
+              </h2>
             ) : (
               <PendingDescription />
             )}

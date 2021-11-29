@@ -1,0 +1,168 @@
+.pendingContainer,
+.doneContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5%;
+  padding: 25px 0px 0px 0px;
+  font-family: var(--font-family);
+  color: var(--color-white);
+}
+
+.textToActive {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 25px;
+  font-weight: normal;
+}
+.pendingList,
+.doneList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  overflow: scroll;
+}
+
+.pendingList::-webkit-scrollbar,
+.doneList::-webkit-scrollbar {
+  width: 7px;
+}
+.pendingList::-webkit-scrollbar:vertical,
+.doneList::-webkit-scrollbar:vertical {
+  width: 8px;
+}
+.pendingList::-webkit-scrollbar-thumb,
+.doneList::-webkit-scrollbar-thumb {
+  background: var(--color-grey);
+  border-radius: 25px;
+}
+
+.btnPendingItem,
+.btnDoneItem {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-grey);
+  border: none;
+  cursor: pointer;
+  margin: 5px 0px 8px 0px;
+  border-radius: 25px;
+  width: 450px;
+  height: 50px;
+}
+
+.btnPendingItem:hover,
+.btnDoneItem:hover {
+  background-color: var(--color-orange);
+}
+
+.btnPendingItem h3,
+.btnDoneItem h3 {
+  padding: 8px 5px 5px 5px;
+  margin: 0px;
+  font-size: 22px;
+  font-family: var(--font-family);
+  font-weight: normal;
+}
+
+/* ipad horizontal */
+@media screen and (min-height: 760px) {
+  @media screen and (min-width: 1024px) {
+    .pendingContainer,
+    .doneContainer {
+      column-gap: 5%;
+      padding: 25px 0px 0px 5px;
+    }
+    .textToActive {
+      padding-top: 10px;
+      margin-top: 0px;
+      font-size: 22px;
+    }
+    .pendingList,
+    .doneList {
+      width: 100%;
+      height: 500px;
+      overflow: scroll;
+    }
+
+    .pendingList::-webkit-scrollbar,
+    .doneList::-webkit-scrollbar {
+      width: 7px;
+    }
+    .pendingList::-webkit-scrollbar:vertical,
+    .doneList::-webkit-scrollbar:vertical {
+      width: 8px;
+    }
+    .pendingList::-webkit-scrollbar-thumb,
+    .doneList::-webkit-scrollbar-thumb {
+      background: var(--color-grey);
+      border-radius: 25px;
+    }
+
+    .btnPendingItem,
+    .btnDoneItem {
+      margin: 5px 0px 8px 0px;
+      border-radius: 25px;
+      width: 400px;
+      height: 50px;
+    }
+
+    .btnPendingItem h3,
+    .btnDoneItem h3 {
+      padding: 8px 5px 5px 5px;
+      margin: 0px;
+      font-size: 22px;
+    }
+  }
+}
+
+/* iPhone 6/7/8 horizontal */
+@media screen and (max-height: 375px) {
+  @media screen and (max-width: 667px) {
+    .pendingContainer,
+    .doneContainer {
+      column-gap: 4%;
+      padding: 10px 0px 0px 10px;
+    }
+    .textToActive {
+      padding-top: 10px;
+      margin-top: 0px;
+      font-size: 15px;
+    }
+    .pendingList,
+    .doneList {
+      width: 100%;
+      height: 220px;
+      overflow: scroll;
+    }
+
+    .pendingList::-webkit-scrollbar,
+    .doneList::-webkit-scrollbar {
+      width: 5px;
+    }
+    .pendingList::-webkit-scrollbar:vertical,
+    .doneList::-webkit-scrollbar:vertical {
+      width: 5px;
+    }
+    .pendingList::-webkit-scrollbar-thumb,
+    .doneList::-webkit-scrollbar-thumb {
+      background: var(--color-grey);
+      border-radius: 25px;
+    }
+
+    .btnPendingItem,
+    .btnDoneItem {
+      margin: 5px 0px 8px 0px;
+      border-radius: 25px;
+      width: 270px;
+      height: 30px;
+    }
+
+    .btnPendingItem h3,
+    .btnDoneItem h3 {
+      padding: 5px 5px 5px 5px;
+      margin: 0px;
+      font-size: 15px;
+    }
+  }
+}

@@ -3,6 +3,7 @@ import { db } from "../../firebase/config";
 import { doc, updateDoc } from "firebase/firestore";
 import { SingleOrder } from "../../context/SingleOrder.jsx";
 import { Button } from "../../components/Button.jsx";
+import "./description.css";
 
 const BtnDone = () => {
   const [singleOrder, setSingleOrder] = useContext(SingleOrder);

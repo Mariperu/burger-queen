@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { db } from "../../firebase/config";
 import { doc, setDoc } from "firebase/firestore";
 import { SingleOrder } from "../../context/SingleOrder.jsx";
-import "./checklist.css";
+import "./check.css";
 
 const Checklist = () => {
   const [singleOrder] = useContext(SingleOrder);
@@ -38,21 +38,23 @@ const Checklist = () => {
               className="singleChecklist"
               key={singleOrder.id + "product" + product.key}
             >
-              <input
-                type="checkbox"
-                className="check"
-                checked={product.readyChef}
-                key={singleOrder.id + "productInput" + product.key}
-                onChange={(e) => {
-                  getCurrentData(
-                    e.target.checked,
-                    singleOrder.data.order.indexOf(product),
-                    singleOrder.id
-                  );
-                }}
-              />
-              <p>{product.quantity}</p>
-              <p>{product.product}</p>
+              <section>
+                <input
+                  type="checkbox"
+                  className="check"
+                  checked={product.readyChef}
+                  key={singleOrder.id + "productInput" + product.key}
+                  onChange={(e) => {
+                    getCurrentData(
+                      e.target.checked,
+                      singleOrder.data.order.indexOf(product),
+                      singleOrder.id
+                    );
+                  }}
+                />
+              </section>
+              <section>{product.quantity}</section>
+              <section>{product.product}</section>
             </section>
           );
         })}

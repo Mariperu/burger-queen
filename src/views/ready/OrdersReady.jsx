@@ -4,6 +4,7 @@ import { db } from "../../firebase/config";
 import { doc, updateDoc } from "firebase/firestore";
 import { useResult } from "../../utils/useResult.jsx";
 import { Button } from "../../components/Button.jsx";
+import "./ordersReady.css";
 
 const OrdersReady = () => {
   const doneData = useResult("order", "done"); //Data de firebase //"done"
@@ -24,8 +25,10 @@ const OrdersReady = () => {
   return (
     <>
       <Header />
+
+      <h3 className="tittleOrdersToDeliver">Pedidos por entregar</h3>
+
       <section className="listReadyContainer">
-        <h3>Pedidos por entregar</h3>
         {currentListReady.map((order) => {
           return (
             <section className="itemReady" key={order.id}>

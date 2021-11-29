@@ -8,7 +8,7 @@ const Header = () => {
     <>
       <section className="headerContainer">
         <Link to="/mesero" className="link">
-          <Logo userName={"Mesero"} style={{ textDecoration: "none" }} />
+          <Logo userName={"Mesero"} />
         </Link>
         <section className="headerNav">
           <a href="/">

@@ -62,9 +62,9 @@ const Waiter = () => {
       const price = elem.price;
       const product = elem.product;
       const quantity = 1;
-      //const readyChef = false;
+      const readyChef = false;
       //console.log(key, product, price, quantity);
-      orderDescription.push({ key, product, price, quantity });
+      orderDescription.push({ key, product, price, quantity, readyChef });
       setOrderDescription([...orderDescription]);
       //console.log(orderDescription);
     } else {

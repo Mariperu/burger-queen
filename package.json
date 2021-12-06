@@ -2,6 +2,7 @@
   "name": "burger-queen",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mariperu.github.io/burger-queen",
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^11.2.7",

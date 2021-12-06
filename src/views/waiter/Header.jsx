@@ -16,15 +16,15 @@ const Header = () => {
           <Logo userName={"Mesero"} />
         </Link>
         <section className="headerNav">
-          <a href="/">
+          <a href="/burger-queen/#">
             <i className="fas fa-home"></i>Inicio
           </a>
 
-          <a href="/usuarios">
+          <a href="/burger-queen/#/usuarios">
             <i className="fas fa-user-friends"></i>Usuarios
           </a>
 
-          <a href="/ready" className="counterReady">
+          <a href="/burger-queen/#/ready" className="counterReady">
             <span> {counterReady} </span>Pedidos listos
           </a>
         </section>

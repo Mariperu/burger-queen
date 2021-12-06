@@ -14,7 +14,7 @@ const Error404 = () => {
         </h1>
         <h3>Página no encontrada</h3>
 
-        <Link to="/">
+        <Link to="/burger-queen/#">
           <Button text="Ir a inicio" className="btnError404" />
         </Link>
       </section>

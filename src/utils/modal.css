@@ -1,0 +1,79 @@
+/*Para delimitar espacio sombreado*/
+.screenCover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* z-index, para sobreponer, default = 0*/
+  z-index: 1;
+}
+
+.modalContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-white);
+  border-radius: 25px;
+  padding: 25px;
+  z-index: 3;
+  width: 350px;
+  height: 350px;
+}
+
+.closeModal {
+  color: var(--color-black);
+  float: right;
+  cursor: pointer;
+  text-align: center;
+  font-size: 25px;
+  padding: 0px;
+}
+
+.closeModal:hover {
+  color: var(--color-orange);
+}
+
+/* ipad horizontal */
+@media screen and (min-height: 760px) {
+  @media screen and (min-width: 1024px) {
+    .modalContainer {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 25px;
+      padding: 25px;
+      z-index: 3;
+      width: 350px;
+      height: 350px;
+    }
+
+    .closeModal {
+      font-size: 25px;
+      padding: 0px;
+    }
+  }
+}
+
+/* iPhone 6/7/8 horizontal */
+@media screen and (max-height: 375px) {
+  @media screen and (max-width: 667px) {
+    .modalContainer {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 25px;
+      padding: 25px;
+      z-index: 3;
+      width: 300px;
+      height: 250px;
+    }
+
+    .closeModal {
+      font-size: 22px;
+      padding: 0px;
+    }
+  }
+}

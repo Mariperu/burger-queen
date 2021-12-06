@@ -1,0 +1,74 @@
+.usersContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0%;
+}
+
+.usersContainer > section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0%;
+}
+
+.usersContainer > section > img {
+  width: 50%;
+  height: 75%;
+}
+
+.btnWaiter,
+.btnChef {
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-family);
+  border-radius: 20px;
+  font-size: 40px;
+  width: 200px;
+  height: 80px;
+}
+
+.btnWaiter {
+  background-color: var(--color-gold);
+  color: var(--color-white);
+}
+.btnChef {
+  background-color: var(--color-green);
+  color: var(--color-white);
+}
+
+/* ipad horizontal */
+@media screen and (min-height: 760px) {
+  @media screen and (min-width: 1024px) {
+    .usersContainer > section > img {
+      width: 80%;
+      height: 80%;
+    }
+    .btnWaiter,
+    .btnChef {
+      border-radius: 20px;
+      font-size: 40px;
+      width: 200px;
+      height: 80px;
+    }
+  }
+}
+
+/* iPhone 6/7/8 horizontal */
+@media screen and (max-height: 375px) {
+  @media screen and (max-width: 667px) {
+    .usersContainer > section > img {
+      width: 60%;
+      height: 70%;
+    }
+    .btnWaiter,
+    .btnChef {
+      border-radius: 20px;
+      font-size: 24px;
+      width: 120px;
+      height: 45px;
+      margin-top: 10px;
+      font-weight: normal;
+    }
+  }
+}

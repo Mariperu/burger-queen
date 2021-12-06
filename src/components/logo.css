@@ -1,0 +1,46 @@
+.littleLogo {
+  display: flex;
+  justify-content: left;
+}
+
+.littleLogo > img {
+  height: 65px;
+  width: 50px;
+  padding: 5px 0px 0px 20px;
+}
+
+.littleLogo > p {
+  padding: 8px 0px 0px 15px;
+  color: var(--color-white);
+  font-size: 25px;
+}
+
+/* ipad horizontal */
+@media screen and (min-height: 760px) {
+  @media screen and (min-width: 1024px) {
+    .littleLogo > img {
+      height: 80px;
+      width: 60px;
+      padding: 10px 10px 0px 20px;
+    }
+    .littleLogo > p {
+      padding: 25px 0px 0px 5px;
+      font-size: 25px;
+    }
+  }
+}
+
+/* iPhone 6/7/8 horizontal */
+@media screen and (max-height: 375px) {
+  @media screen and (max-width: 667px) {
+    .littleLogo > img {
+      height: 50px;
+      width: 42px;
+      padding: 5px 10px 0px 20px;
+    }
+    .littleLogo > p {
+      padding: 10px 0px 0px 0px;
+      font-size: 18px;
+    }
+  }
+}

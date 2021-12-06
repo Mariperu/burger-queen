@@ -1,11 +1,10 @@
-.chefOptionsContainer {
+.menuContainer {
   display: flex;
-  justify-content: left;
-  padding: 0px 0px 0px 160px;
+  justify-content: center;
+  width: 100%;
 }
 
-.pendingOption,
-.doneOption {
+.btnMenuOption {
   color: var(--color-black);
   background-color: var(--color-grey);
   font-family: var(--font-family);
@@ -17,25 +16,19 @@
   font-size: 23px;
   margin: 0px 20px 0px 20px;
 }
-
-.pendingOption:hover,
-.doneOption:hover {
-  background-color: var(--color-orange);
+.btnMenuOption:hover {
+  background-color: var(--color-yellow);
 }
 
 /* ipad horizontal */
 @media screen and (min-height: 760px) {
   @media screen and (min-width: 1024px) {
-    .chefOptionsContainer {
-      padding: 0px 0px 0px 90px;
-    }
-    .pendingOption,
-    .doneOption {
+    .btnMenuOption {
       border-radius: 25px;
       border: none;
       height: 50px;
       width: 120px;
-      font-size: 22px;
+      font-size: 23px;
       margin: 0px 15px 0px 15px;
     }
   }
@@ -44,11 +37,7 @@
 /* iPhone 6/7/8 horizontal */
 @media screen and (max-height: 375px) {
   @media screen and (max-width: 667px) {
-    .chefOptionsContainer {
-      padding: 0px 0px 0px 70px;
-    }
-    .pendingOption,
-    .doneOption {
+    .btnMenuOption {
       border-radius: 25px;
       border: none;
       height: 30px;

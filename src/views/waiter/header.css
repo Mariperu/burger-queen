@@ -1,0 +1,66 @@
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.headerNav {
+  display: flex;
+  float: left;
+  justify-content: space-between;
+}
+
+.headerNav a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 24px;
+  padding: 30px 35px 0px 35px;
+}
+
+.headerNav a :hover {
+  color: var(--color-orange);
+}
+
+.counterReady > span {
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  font-size: 22px;
+  padding: 0px 2px 0px 5px;
+  margin-right: 5px;
+}
+.counterReady > span:hover {
+  color: var(--color-black);
+}
+/* ipad horizontal */
+@media screen and (min-height: 760px) {
+  @media screen and (min-width: 1024px) {
+    .headerNav a {
+      font-size: 25px;
+      padding: 48px 35px 0px 35px;
+    }
+
+    .counterReady > span {
+      border-radius: 50%;
+      font-size: 24px;
+      padding: 0px 3px 0px 7px;
+      margin-right: 5px;
+    }
+  }
+}
+
+/* iPhone 6/7/8 horizontal */
+@media screen and (max-height: 375px) {
+  @media screen and (max-width: 667px) {
+    .headerNav a {
+      font-size: 18px;
+      padding: 25px 25px 0px 25px;
+    }
+
+    .counterReady > span {
+      border-radius: 50%;
+      font-size: 16px;
+      padding: 0px 3px 0px 5px;
+      margin-right: 5px;
+    }
+  }
+}

@@ -46,8 +46,6 @@ const Order = ({ orderDescription, reset, onClick }) => {
     setCurrentOrder([...newOrder]);
   };
 
-  //console.log("NUEVA ORDEN", newOrder);
-
   //Subir nueva orden a Firebase con id generado por firestore
   const sendNewOrder = async (e) => {
     e.preventDefault();

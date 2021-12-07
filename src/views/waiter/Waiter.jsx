@@ -7,8 +7,9 @@ import { MenuOptions } from "./MenuOptions.jsx";
 import { Products } from "./Products.jsx";
 import { Additional } from "./Additional.jsx";
 import { Order } from "./Order.jsx";
-import "./waiter.css";
 import swal from "sweetalert";
+import { SmallDevice } from "../../utils/SmallDevice.jsx";
+import "./waiter.css";
 
 const Waiter = () => {
   const { docs } = useData("menu"); //Data de firebase
@@ -20,7 +21,6 @@ const Waiter = () => {
   //Adicionales de hamburgesa
   const addAdditional = (e) => {
     let key = hamburgerExtra.id + "-" + IdGenerator();
-    //let key = "hbx-" + IdGenerator();
     let meatDefault = "res";
     let quantity = 1;
     let price = hamburgerExtra.price;
@@ -52,12 +52,12 @@ const Waiter = () => {
     //findIndex: devuelve índice de 1er elem de array que cumpla con condicional, sino devuelve -1
     const singleElem = orderDescription.findIndex((i) => i.key === elem.id);
 
-    //opciones hamburguesa +extra
+    //opciones hamburguesa + extra
     if (elem.type === "De la casa" && elem.subtype !== "Acompañamiento") {
       setOpen(true); //console.log("Open modal");
       setHamburgerExtra(elem); //console.log(setHamburgerExtra(elem));
 
-      //pedido diferente de hamburgusa
+      //pedido diferente de hamburguesa
     } else if (singleElem === -1) {
       const key = elem.id;
       const price = elem.price;
@@ -130,15 +130,13 @@ const Waiter = () => {
             data-testid="order"
             orderDescription={orderDescription}
             reset={clearOrder}
-            // onClick={() => {
-            //   setOrderDescription([]); //limpiar orden, cancelar
-            // }}
             onClick={
               () => showCancelAlert() //limpiar orden, cancelar
             }
           />
         </section>
       </section>
+      <SmallDevice />
     </>
   );
 };

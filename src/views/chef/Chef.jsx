@@ -3,6 +3,7 @@ import { Header } from "./Header.jsx";
 import { Button } from "../../components/Button.jsx";
 import { Pending } from "./Pending.jsx";
 import { Done } from "./Done.jsx";
+import { SmallDevice } from "../../utils/SmallDevice.jsx";
 import "./chef.css";
 
 const Chef = () => {
@@ -35,6 +36,8 @@ const Chef = () => {
       </section>
 
       {component === "pending" ? <Pending /> : <Done />}
+
+      <SmallDevice />
     </>
   );
 };

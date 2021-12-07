@@ -31,6 +31,11 @@
 .counterReady > span:hover {
   color: var(--color-black);
 }
+
+.link {
+  text-decoration: none;
+}
+
 /* ipad horizontal */
 @media screen and (min-height: 760px) {
   @media screen and (min-width: 1024px) {

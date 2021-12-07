@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   border-left: solid 1px var(--color-white);
-  padding-left: 30px;
+  padding-left: 10px;
+  width: 98%;
 }
 .tittleOrder {
   margin: 10px 0px 0px 0px;
@@ -109,6 +110,7 @@
 @media screen and (min-height: 760px) {
   @media screen and (min-width: 1024px) {
     .orderContainer {
+      width: 97%;
       padding-left: 10px;
     }
     .tittleOrder {
@@ -198,6 +200,7 @@
 @media screen and (max-height: 375px) {
   @media screen and (max-width: 667px) {
     .orderContainer {
+      width: 95%;
       padding-left: 10px;
     }
     .tittleOrder {

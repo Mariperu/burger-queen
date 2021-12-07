@@ -4,9 +4,9 @@ import { Input } from "../../components/Input.jsx";
 import { OrderItem } from "./OrderItem.jsx";
 import { db } from "../../firebase/config";
 import { collection, addDoc } from "firebase/firestore";
-import "./order.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./order.css";
 
 const Order = ({ orderDescription, reset, onClick }) => {
   const [customerName, setCustomerName] = useState("");
@@ -150,6 +150,7 @@ const Order = ({ orderDescription, reset, onClick }) => {
             text="Enviar"
             onClick={sendNewOrder}
           />
+
           <ToastContainer />
         </section>
       </section>

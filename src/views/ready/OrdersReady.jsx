@@ -4,6 +4,7 @@ import { db } from "../../firebase/config";
 import { doc, updateDoc } from "firebase/firestore";
 import { useResult } from "../../utils/useResult.jsx";
 import { Button } from "../../components/Button.jsx";
+import { SmallDevice } from "../../utils/SmallDevice.jsx";
 import "./ordersReady.css";
 
 const OrdersReady = () => {
@@ -47,6 +48,8 @@ const OrdersReady = () => {
           );
         })}
       </section>
+
+      <SmallDevice />
     </>
   );
 };

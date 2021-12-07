@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../../components/Button.jsx";
 import { Logo } from "../../components/Logo.jsx";
+import { SmallDevice } from "../../utils/SmallDevice.jsx";
 import mesero from "../../assets/mesero.png";
 import chef from "../../assets/chef.png";
 import "./users.css";
@@ -30,6 +31,8 @@ const Users = () => {
           </section>
         </section>
       </section>
+
+      <SmallDevice />
     </>
   );
 };

@@ -5,7 +5,7 @@ const IdGenerator = () => {
 
   let idGenerated = "";
 
-  //nro de dígitos 4
+  //4 dígitos
   for (let i = 0; i < 4; i++) {
     idGenerated += letters.charAt(Math.floor(Math.random() * letters.length));
   }

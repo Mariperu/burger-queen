@@ -1,0 +1,19 @@
+.smallDeviceContainer {
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .smallDeviceContainer {
+    display: block;
+    height: 100vh;
+    text-align: center;
+    color: var(--color-white);
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    padding: 100px 20px 50px 20px;
+  }
+  .smallDeviceContainer > h1 {
+    font-size: 80px;
+    margin: 0;
+  }
+}

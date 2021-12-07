@@ -19,4 +19,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: var(--font-family);
+  display: block;
+}
+
+@media screen and (max-width: 1023px) {
+  #root {
+    display: none; /*To show smallDev*/
+  }
 }

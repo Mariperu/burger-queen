@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  //BrowserRouter as Router,
-  Routes,
-  Route,
-  HashRouter,
-} from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./views/home/Home.jsx";
 import { Users } from "./views/users/Users.jsx";
 import { Waiter } from "./views/waiter/Waiter.jsx";
@@ -16,8 +11,7 @@ import "./App.css";
 function App() {
   return (
     <>
-      {/* <Router> */}
-      <HashRouter>
+      <Router>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/usuarios" element={<Users />} />
@@ -26,8 +20,7 @@ function App() {
           <Route path="/ready" element={<OrdersReady />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
-      </HashRouter>
-      {/* </Router> */}
+      </Router>
     </>
   );
 }

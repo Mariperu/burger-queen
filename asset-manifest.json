@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/burger-queen/static/css/main.8983da88.chunk.css",
-    "main.js": "/burger-queen/static/js/main.62066015.chunk.js",
-    "main.js.map": "/burger-queen/static/js/main.62066015.chunk.js.map",
+    "main.js": "/burger-queen/static/js/main.db20f697.chunk.js",
+    "main.js.map": "/burger-queen/static/js/main.db20f697.chunk.js.map",
     "runtime-main.js": "/burger-queen/static/js/runtime-main.742f6749.js",
     "runtime-main.js.map": "/burger-queen/static/js/runtime-main.742f6749.js.map",
     "static/css/2.58a45539.chunk.css": "/burger-queen/static/css/2.58a45539.chunk.css",
@@ -22,6 +22,6 @@
     "static/css/2.58a45539.chunk.css",
     "static/js/2.1fd301cf.chunk.js",
     "static/css/main.8983da88.chunk.css",
-    "static/js/main.62066015.chunk.js"
+    "static/js/main.db20f697.chunk.js"
   ]
 }

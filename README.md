@@ -6,8 +6,7 @@
 
 - [1. Resumen del proyecto](#1-resumen-del-proyecto)
 - [2. Historias de usuario](#2-historias-de-usuario)
-- [3. Informe Lighthouse](#3-informe-lighthouse)
-- [4. Objetivos de aprendizaje](#4-objetivos-de-aprendizaje)
+- [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
 
 ---
 
@@ -72,13 +71,7 @@ _Meserx debe ver pedidos listos para servir_
 
 ## ![ready](./src/assets/readyv.png)
 
-## 3. Informe Lighthouse
-
-![lighthouse](./src/assets/lighthouse.jpg)
-
----
-
-## 4. Objetivos de aprendizaje
+## 3. Objetivos de aprendizaje
 
 ### 📚 HTML
 

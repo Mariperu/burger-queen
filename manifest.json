@@ -1,10 +1,18 @@
 {
-  "short_name": "BQ App",
-  "name": "Burger Queen App",
+  "short_name": "BQueen",
+  "name": "Burger Queen",
+  "description": "Burger Queen App",
+  "start_url": "./?utm_source=web_app_manifest",
+  "scope": "./",
+  "lang": "es-MX",
+  "orientation": "portrait",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#ff4300",
   "icons": [
     {
       "src": "logoBQ.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "128x128",
       "type": "image/x-icon"
     },
     {
@@ -17,9 +25,5 @@
       "type": "image/png",
       "sizes": "512x512"
     }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  ]
 }
